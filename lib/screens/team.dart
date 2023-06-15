@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'culture.dart';
+import 'agriculture.dart';
+import 'population.dart';
 
 class TeamPage extends StatelessWidget {
   final List<String> images = [
-    'assets/Vikram.jpg',
-    'assets/images/image2.jpg',
+    'Vikram.jpg',
+    'vikram.jpg',
     'assets/images/image3.jpg',
   ];
 
@@ -28,7 +31,89 @@ class TeamPage extends StatelessWidget {
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Image and Text'),
+          title: Text('Team'),
+          leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.popUntil(context, ModalRoute.withName('/'));
+          },
+        ),
+          actions: [
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(0.0), // Make the buttons rectangular with sharp edges
+              ),
+              padding: EdgeInsets.zero, // Remove the padding between the button and the text
+              minimumSize: Size(120, double.infinity), // Set a fixed size for each button
+              tapTargetSize: MaterialTapTargetSize.shrinkWrap, // Reduce the tap target size
+              elevation: 0, // Remove the drop shadow
+            ),
+            child: Text("Culture"),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => CulturePage()),
+              );
+            },
+          ),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(0.0), // Make the buttons rectangular with sharp edges
+              ),
+              padding: EdgeInsets.zero, // Remove the padding between the button and the text
+              minimumSize: Size(120, double.infinity), // Set a fixed size for each button
+              tapTargetSize: MaterialTapTargetSize.shrinkWrap, // Reduce the tap target size
+              elevation: 0, // Remove the drop shadow
+            ),
+            child: Text("Agriculture"),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => AgriculturePage()),
+              );
+              // Handle search action
+            },
+          ),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(0.0), // Make the buttons rectangular with sharp edges
+              ),
+              padding: EdgeInsets.zero, // Remove the padding between the button and the text
+              minimumSize: Size(120, double.infinity), // Set a fixed size for each button
+              tapTargetSize: MaterialTapTargetSize.shrinkWrap, // Reduce the tap target size
+              elevation: 0, // Remove the drop shadow
+            ),
+            child: Text("Population"),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => PopulationPage()),
+              );
+              // Handle search action
+            },
+          ),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(0.0), // Make the buttons rectangular with sharp edges
+              ),
+              padding: EdgeInsets.zero, // Remove the padding between the button and the text
+              minimumSize: Size(120, double.infinity), // Set a fixed size for each button
+              tapTargetSize: MaterialTapTargetSize.shrinkWrap, // Reduce the tap target size
+              elevation: 0, // Remove the drop shadow
+            ),
+            child: Text("Team"),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => TeamPage()),
+              );
+            },
+          ),
+          ],
         ),
         body: ListView.builder(
           itemCount: images.length,
