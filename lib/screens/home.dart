@@ -4,6 +4,7 @@ import 'culture.dart';
 import 'team.dart';
 import 'agriculture.dart';
 import 'population.dart';
+import 'resource.dart';
 // import 'interactive_map.dart';
 
 void main() {
@@ -51,7 +52,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('My App'),
+        title: Text(''),
         backgroundColor: Colors.blue,
         elevation: 0,
         actions: [
@@ -107,6 +108,25 @@ class _HomePageState extends State<HomePage> {
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => PopulationPage()),
+              );
+              // Handle search action
+            },
+          ),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(0.0),
+              ),
+              padding: EdgeInsets.zero,
+              minimumSize: Size(120, double.infinity),
+              tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+              elevation: 0,
+            ),
+            child: Text("Resources"),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => ResourcePage()),
               );
               // Handle search action
             },

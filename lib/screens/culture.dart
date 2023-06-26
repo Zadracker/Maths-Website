@@ -3,6 +3,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'team.dart';
 import 'agriculture.dart';
 import 'population.dart';
+import 'resource.dart';
 
 class CulturePage extends StatefulWidget {
   @override
@@ -110,6 +111,25 @@ class _CulturePageState extends State<CulturePage> {
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => PopulationPage()),
+              );
+              // Handle search action
+            },
+          ),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(0.0),
+              ),
+              padding: EdgeInsets.zero,
+              minimumSize: Size(120, double.infinity),
+              tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+              elevation: 0,
+            ),
+            child: Text("Resources"),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => ResourcePage()),
               );
               // Handle search action
             },
