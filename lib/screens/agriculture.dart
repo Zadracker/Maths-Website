@@ -125,7 +125,7 @@ class AgriculturePage extends StatelessWidget {
                 height: MediaQuery.of(context).size.height * 0.6, // Adjust the height as needed
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage('agriculture_1.jpg'),
+                    image: AssetImage('build/web/assets/agriculture_1.jpg'),
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -147,7 +147,7 @@ class AgriculturePage extends StatelessWidget {
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(8.0),
                           image: DecorationImage(
-                            image: AssetImage('resources_2.jpg'),
+                            image: AssetImage('web/assets/resources_2.jpg'),
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -299,7 +299,7 @@ class AgriculturePage extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  "Q-	Aryan grows sugarcane on his farm. The height of his crops are increasing at the rate 15cm/week, how tall would his crop be after 8 months?",
+                                  "Q-	The height of the crop are increasing at the rate 15cm/week. In 87 weeks it was found that crop has achieved its maximum height which is 600cm. Then find the height-time function [h(t)] of the sugarcane?",
                                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                                   textAlign: TextAlign.left,
                                 ),
@@ -312,7 +312,7 @@ class AgriculturePage extends StatelessWidget {
                                   child: Padding(
                                     padding: const EdgeInsets.all(8.0),
                                     child: Text(
-                                      "To solve this problem using differentiation, we can consider the rate of change of the height of the crops with respect to time. The rate of change is given as 15 cm/week, which represents the derivative of the height function.\n\nLet's assume the height of the crops at any given time t is denoted by h(t) cm. We can express the rate of change using differentiation:\n\n  dh/dt = 15 cm/week\n\nNow, we can integrate both sides of the equation with respect to t to find the height function h(t):\n\n  ∫ dh/dt dt = ∫ 15 cm/week dt\n\nIntegrating both sides will give us:\n\n  h(t) = ∫ 15 cm/week dt\n\nIntegrating a constant rate of change gives us:\n\n  h(t) = 15t + C\n\nWhere C is the constant of integration.\n\nSince we want to find the height after 8 months (34.64 weeks), we substitute t = 34.64 into the equation:\n\n  h(34.64) = 15(34.64) + C",
+                                      "dh/dt = 15cm/week\nOr dh = 15 dt\nIntegrating both side with –\n∫dh.dt = ∫15.dt\nh(t) = 15t+C 		(i)\nIn the question it is given that \nWhen t = 87 \nh(t) = 600\n\nPut the value in equation (i)\nh(t) = 15t+C\n600 = 15 x 87 +C\ntherefore, C = 600-(15x87)\n= 600 -1305 = -705\nAgain, putting the value of C in equation (i)\nh(t) = 15t-705  ",
                                       style: TextStyle(
                                         fontSize: 16,
                                         color: Colors.white,

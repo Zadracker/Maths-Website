@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:video_player/video_player.dart';
 import 'culture.dart';
 import 'team.dart';
 import 'agriculture.dart';
 import 'population.dart';
 import 'resource.dart';
-// import 'interactive_map.dart';
 
 void main() {
   runApp(MyApp());
@@ -29,25 +27,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  late VideoPlayerController _videoPlayerController;
-
-  @override
-  void initState() {
-    super.initState();
-    _videoPlayerController = VideoPlayerController.asset('manipur_BG_vid.mp4');
-    _videoPlayerController.initialize().then((_) {
-      setState(() {});
-      _videoPlayerController.play();
-      _videoPlayerController.setLooping(true);
-    });
-  }
-
-  @override
-  void dispose() {
-    _videoPlayerController.dispose();
-    super.dispose();
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -90,7 +69,6 @@ class _HomePageState extends State<HomePage> {
                 context,
                 MaterialPageRoute(builder: (context) => AgriculturePage()),
               );
-              // Handle search action
             },
           ),
           ElevatedButton(
@@ -109,7 +87,6 @@ class _HomePageState extends State<HomePage> {
                 context,
                 MaterialPageRoute(builder: (context) => PopulationPage()),
               );
-              // Handle search action
             },
           ),
           ElevatedButton(
@@ -128,7 +105,6 @@ class _HomePageState extends State<HomePage> {
                 context,
                 MaterialPageRoute(builder: (context) => ResourcePage()),
               );
-              // Handle search action
             },
           ),
           ElevatedButton(
@@ -153,16 +129,11 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Stack(
         children: [
-          Center(
-            child: _videoPlayerController.value.isInitialized
-                ? AspectRatio(
-                    aspectRatio: _videoPlayerController.value.aspectRatio,
-                    child: Transform.scale(
-                      scale: 1.5,
-                      child: VideoPlayer(_videoPlayerController),
-                    ),
-                  )
-                : Container(),
+          Image.asset(
+            'web/assets/MN_BG.jpg',
+            fit: BoxFit.cover,
+            width: double.infinity,
+            height: double.infinity,
           ),
           Positioned(
             left: 0,
@@ -236,4 +207,3 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
-

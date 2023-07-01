@@ -472,7 +472,7 @@ class _AnotherCardRowState extends State<AnotherCardRow> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            "If the function for the graph of Population growth in Manipur is given. Find out the interval where it increases and decreases. Let f(x)=([x^2]/8)+8x-9",
+                            "If the function for the growth in the population is given by f(x)=0.1x+1.7, where x is time in years; then find the rate of change of this function and estimate the population in 2025.",
                             style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.bold,
@@ -488,7 +488,7 @@ class _AnotherCardRowState extends State<AnotherCardRow> {
                               totalRepeatCount: 1,
                               pause: Duration(milliseconds: 1000),
                               text: [
-                                "f(x) = (x²/3) + 8x - 9\nFor a function to be increasing f'(x)>0\n\nf'(x) = 2x+8\nPut f'(x) = 0\n2x+8=0\nx=-4\n\nCase 1: (-∞,-4)\nf'(x) = 2(-10) +8\n= -20+8 = -12\nTherefore, This is the decreasing interval\n\nCase 2: (4,∞)\nf'(x)= 2(0)+8\n= 8 = +ve\nTherefore, This is the increasing function\n\nTherefore, function is decreasing from (-∞,-4) and increasing from (4,∞)."
+                                "f(x) = 0.1x+1.7\ndifferentiating the function \nf’(x) = 0.1 (+ve)\nf’(x)>0\nwhich shows that the population graph is increasing according to the year. Hence, the rate in the change of the population in 100000 (approx.).\nTherefore the population in 2025 will be\n\nf(25) = 0.1(25) +1.7\n=2.5+1.9\n=4.5 (approx.)",
                               ],
                               textStyle: TextStyle(
                                 fontSize: 16,
